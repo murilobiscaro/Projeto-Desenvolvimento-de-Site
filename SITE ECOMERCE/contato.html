@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>online e-coemmerce</title>
+        <link rel="stylesheet" href="estilo.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <script src="script.js"></script>
+    </head>
+    <body id="interface">
+        <div id="cabecalho">
+            <img src="_imagens/cabecalho_fundo.jpg">
+        </div>
+        <nav id="menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="historiadaempresa.html">HISTÓRIA DA EMPRESA</a></li>
+                <li class="produtos">
+                    <a class="produtos-btn" href="#">PRODUTOS</a>
+                    <div class="produtos-menu">
+                        <a href="processadores.html">PROCESSADORES</a>
+                        <a href="placasdevideo.html">PLACAS DE VÍDEO</a>
+                        <a href="perifericos.html">PERIFÉRICOS</a>
+                    </div>
+                </li>
+                <li><a href="contato.html">CONTATO</a></li>
+            </ul>
+        </nav>
+        <h1>CONTATO</h1>
+        <form name="cadastro">
+            <fieldset id="usuario"><legend>IDENTIFICAÇÃO DO USUÁRIO</legend>
+                <h4>Nome: <input type="text" name="tNome" id="cNome" size="40" maxlength="40"></h4>
+                <div><small id="erro-nome" style="color:red;"></small></div>
+                <h4>Email:<input type="email" name="tEmail" id="cEmail" size="40" maxlength="40"></h4>
+                <div><small id="erro-email" style="color:red;"></small></div>
+                <h4>Telefone:<input type="tel" name="tFone" id="cFone" size="15" maxlength="15"></h4>
+                <div><small id="erro-fone" style="color:red;"></small></div>
+            </fieldset>
+            <fieldset id="mensagem"><legend>MENSAGEM</legend>
+                <h4><label class="categoria">De qual categoria deseja informação:</label></h4>
+                    <select id="menu-opcoes">
+                        <option value="0">Selecione...</option>
+                        <option value="1">Processadores</option>
+                        <option value="2">Placa de Vídeo</option>
+                        <option value="3">Perifericos</option>
+                    </select>
+                    <div><small id="erro-menu" style="color:red;"></small></div>
+                <h4>Assunto: <input type="text" name="tAssunto" id="cAssunto" size="40" maxlength="40"></h4>
+                <div><small id="erro-assunto" style="color:red;"></small></div>
+                <h4>Mensagem:<textarea maxlength="200" id="cMsg"></textarea></h4>
+                <div><small id="erro-mensagem" style="color:red;"></small></div>
+            </fieldset>
+            <hgroup id="botoes">
+                <input type="reset" value="Limpar Formulario"/>
+                <input type="submit" onclick="validar(event)"/>
+            </hgroup>
+        </form>
+
+        <footer id="Rodape">
+            <p>Copyright &copy; 2020  by Murilo Biscaro</p>
+        </footer>
+    </body>
+</html>
